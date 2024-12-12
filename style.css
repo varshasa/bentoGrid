@@ -139,8 +139,8 @@ p{
         grid-template-columns: 1fr 1fr;
     }
 
-    /* .inside-element , .inside-element:nth-child(1), .column-one{
-        grid-template-columns: 1fr; */
+     .inside-element , .inside-element:nth-child(1), .column-one{
+        grid-template-columns: 1fr 1fr; 
     }
 };
     
