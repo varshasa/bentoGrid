@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    line-height: 1.1;
+    color: black;
+    padding: 2rem 1rem;
+}
+
+.item1{
+    background-color: rgb(246, 225, 198);
+}
+
+.item2{
+    background-color: rgb(250, 185, 65);
+}
+
+.item3{
+    background-color: rgb(162, 162, 234);
+}
+
+.item4{
+    background-color: rgb(235, 235, 218);
+}
+
+.item5{
+    background-color: rgb(250, 185, 65); ;
+}
+
+.item6{
+    background-color: rgb(199, 244, 229);
+}
+
+.item7{
+    background-color: rgb(230, 226, 221);
+}
+
+.item8{
+    background-color: rgb(128, 128, 244);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 13rem 13rem 13rem;
+    grid-template-areas: 
+    'column1 column2 column3'
+    'column1 column2 column3'
+    'column1 column4 column4'
+    ;
+    gap: 1rem;
+    width:80vw;
+     /*margin-inline: auto; */
+     margin: auto;
+     margin-top: 5rem;
+}
+
+.grid-container> * , .inside-element{
+    display: grid;
+    gap: 1rem;
+}
+
+.grid-item-element{
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.inside-element{
+    grid-template-columns: 1fr 1fr;
+}
+
+.inside-element:nth-child(1){
+   grid-template-columns: 0.73fr 1.5fr;
+}
+
+.column-one{
+    grid-area: column1;
+}
+
+.column-two{
+    grid-area: column2;
+}
+
+.column-three{
+    grid-area: column3;
+}
+
+.column-four{
+    grid-area: column4;
+} 
+
+h2{
+    font-size: x-large;
+    text-align: center;
+}
+p{
+    font-size: medium;
+    text-align: center;
+    /* padding-top: 2rem; */
+}
+
+
+@media screen and (max-width: 950px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 13rem 13rem 13rem;
+        grid-template-areas: 
+        'column2 column3'
+        'column2 column3'
+        'column4 column4'
+        'column1 column1'
+        ;
+    }
+
+    .column-one{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'column2'
+        'column3'
+        'column4'
+        'column1'
+        ;
+    }
+
+    .column-one{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* .inside-element , .inside-element:nth-child(1), .column-one{
+        grid-template-columns: 1fr; */
+    }
+};
+    
